@@ -1,0 +1,134 @@
+body{
+	--color-5: #ff8b94;
+	--color-4:#FE001B; /*food color*/;
+	--color-2:#3B0005/*snake-color*/;
+	--color-3:#DF4523/*snake-color*/;
+	margin:0px ;
+	padding:0px;
+}
+.container{
+	margin:0 auto;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	background-color: #B6D8DB ;/*#A5C5C8 */ /*#99BBB7*/ /*#99AFBB*/ 
+	padding-bottom: 40px;
+	position: relative;
+}
+.topright {
+  position: absolute;
+  top: 50px;
+  right: 16px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.head{
+	padding-top: 40px;
+	font-size: 40px;
+	margin-bottom: 0;
+}
+.score-board{
+	margin-top: 0px;
+	font-size: 30px;
+	margin-bottom: 40px;
+}
+.grid{
+	width:800px;
+	height: 500px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: black;
+	border:solid black ;
+}
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+.snake-red {
+    background-color: var(--color-3);
+    
+}
+.snake-yellow{
+	background-color: var(--color-2);
+}
+
+.apple{
+	background-color: var(--color-5);
+
+}
+.bonusapple{
+	background-color: var(--color-4);
+	animation: blink 1s  infinite;
+	border-radius: 50%;
+}
+@keyframes blink{
+0%{opacity: 0; }
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
+
+button {
+    color: #fff;
+    padding: 15px 35px;
+    font-size: 30px;
+    margin: 40px auto ;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: var(--color-5);
+}
+button:focus {
+    outline: none;
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#myModal{
+  position:absolute;
+  display: none;
+  font-size: 30px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+ 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 3s
+}
+/* Add Animation */
+
+@keyframes animatetop {
+  from {left:35%;top:10%; opacity:0}
+  to {left:35%;top:60%; opacity:1}
+}
+#sttart{
+	margin: 5px auto ;
+}

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <h1 class="head">Snake Game</h1>
+        <div class="topright">Max Score: <span id="high-score">0</span></div>
+        <button id="start"onclick="startGame()"><span>Start 🐍</span></button>
+        <h2 class='score-board'>Score: <span id="score">0</span></h2>
+        <div class="grid"></div>
+        <div id="myModal">
+            Oops U are out!...<br>Your Score=<span id='message'>0</span>
+            <div>
+                <button id="start"onclick="startGame()"><span>Restart 🐍</span></button>
+            </div>
+        </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
